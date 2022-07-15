@@ -1,0 +1,181 @@
+header {
+  width: 60%;
+  height: 40px;
+  min-width: 990px;
+  margin: 0 auto;
+  display: flex;
+}
+header .logo {
+  width: 112px;
+  height: 40px;
+  background-image: url("../images/logo.png");
+  position: relative;
+  z-index: 10;
+}
+header .ad {
+  width: 160px;
+  height: 40px;
+  flex-grow: 1;
+  position: relative;
+  display: block;
+}
+header .ad .small:hover + .big {
+  display: block;
+}
+header .ad .big {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -122px;
+  z-index: 5;
+}
+header .ad .big:hover {
+  display: block;
+}
+header .grow {
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+  z-index: -1;
+}
+header .grow a {
+  text-decoration: none;
+  font-style: 14px;
+  color: #333;
+}
+header .grow a:hover {
+  color: red;
+}
+header .grow a::before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  background-image: url("../images/title_sprite.png");
+  left: 8px;
+  background-position: -30px;
+}
+header .rank {
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  position: relative;
+}
+header .rank > .title {
+  color: #333;
+  cursor: pointer;
+}
+header .rank > .title::after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  background-image: url("../images/title_sprite.png");
+  right: 5px;
+  transform: rotate(90deg);
+}
+header .rank:hover > .detail {
+  display: flex;
+  z-index: 5;
+}
+header .rank .detail {
+  width: 600px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  padding: 10px 20px 10px 20px;
+  justify-content: space-between;
+  background-color: #fafafa;
+  display: none;
+}
+header .rank .detail .tab {
+  width: 190px;
+  text-align: left;
+}
+header .rank .detail .tab > .title {
+  display: block;
+  height: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+}
+header .rank .detail .tab > .title::after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  background-image: url("../images/title_sprite.png");
+  right: 0;
+  opacity: 0.3;
+}
+header .rank .detail .tab .items .item {
+  position: relative;
+  margin-bottom: 20px;
+}
+header .rank .detail .tab .items .item.active .text {
+  display: none;
+}
+header .rank .detail .tab .items .item.active .img {
+  display: block;
+}
+header .rank .detail .tab .items .item:nth-child(n+4) .num {
+  background-color: #bbb;
+}
+header .rank .detail .tab .items .item .num {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  z-index: 2;
+}
+header .rank .detail .tab .items .item .text {
+  line-height: 20px;
+  padding-left: 25px;
+}
+header .rank .detail .tab .items .item .img {
+  height: 85px;
+  position: relative;
+  display: none;
+}
+header .rank .detail .tab .items .item .img img {
+  width: 190px;
+  height: 85px;
+}
+header .rank .detail .tab .items .item .img div {
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+}
+header .rank .detail .tab .items .item .img div a {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+}
+header .rank .detail .center {
+  width: 190px;
+  background-color: aqua;
+}
+header .rank .detail .right {
+  width: 190px;
+  background-color: saddlebrown;
+}

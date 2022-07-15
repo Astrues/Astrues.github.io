@@ -1,0 +1,219 @@
+@textColor1: #333;
+@aHoverColor: red;
+
+// 头部的混入
+.topIco() {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    background-image: url("../images/title_sprite.png");
+}
+
+// 头部的样式
+header {
+    width: 60%;
+    height: 40px;
+    min-width: 990px;
+    margin: 0 auto;
+    display: flex;
+
+    .logo {
+        width: 112px;
+        height: 40px;
+        background-image: url("../images/logo.png");
+        position: relative;
+        z-index: 10;
+    }
+
+    .ad {
+        width: 160px;
+        height: 40px;
+        flex-grow: 1;
+        position: relative;
+        display: block;
+
+        .small {
+            &:hover {
+                +.big {
+                    display: block;
+                }
+            }
+        }
+
+        .big {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: -122px;
+            z-index: 5;
+            &:hover {
+                display: block;
+            }
+        }
+
+    }
+
+    .grow {
+        width: 160px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        position: relative;
+        z-index: -1;
+
+        a {
+            text-decoration: none;
+            font-style: 14px;
+            color: @textColor1;
+
+            &:hover {
+                color: red;
+            }
+
+            &::before {
+                .topIco();
+                left: 8px;
+                background-position: -30px;
+            }
+        }
+    }
+
+    .rank {
+        width: 160px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        position: relative;
+
+        >.title {
+            color: @textColor1;
+            cursor: pointer;
+
+            &::after {
+                .topIco();
+                right: 5px;
+                transform: rotate(90deg);
+            }
+        }
+
+        &:hover {
+            >.detail {
+                display: flex;
+                z-index: 5;
+            }
+        }
+
+        .detail {
+            width: 600px;
+            position: absolute;
+            right: 0;
+            display: flex;
+            padding: 10px 20px 10px 20px;
+            justify-content: space-between;
+            background-color: #fafafa;
+            display: none;
+
+            .tab {
+                width: 190px;
+                text-align: left;
+
+                >.title {
+                    display: block;
+                    height: 60px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    position: relative;
+
+                    &::after {
+                        .topIco();
+                        right: 0;
+                        opacity: .3;
+                    }
+                }
+
+                .items {
+                    .item {
+                        position: relative;
+                        margin-bottom: 20px;
+
+                        &.active {
+                            .text {
+                                display: none;
+                            }
+
+                            .img {
+                                display: block;
+                            }
+                        }
+
+                        &:nth-child(n+4) {
+                            .num {
+                                background-color: #bbb;
+                            }
+                        }
+
+                        .num {
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            background-color: red;
+                            text-align: center;
+                            line-height: 20px;
+                            color: #fff;
+                            z-index: 2;
+                        }
+
+                        .text {
+                            line-height: 20px;
+                            padding-left: 25px;
+                        }
+
+                        .img {
+                            height: 85px;
+                            position: relative;
+                            display: none;
+
+                            img {
+                                width: 190px;
+                                height: 85px;
+                            }
+
+                            div {
+                                height: 30px;
+                                background-color: rgba(0, 0, 0, .6);
+                                position: absolute;
+                                width: 100%;
+                                bottom: 0;
+                                display: flex;
+
+                                a {
+                                    height: 30px;
+                                    line-height: 30px;
+                                    display: block;
+                                    color: #fff;
+                                    text-decoration: none;
+                                    flex-grow: 1;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .center {
+                width: 190px;
+                background-color: aqua;
+            }
+
+            .right {
+                width: 190px;
+                background-color: saddlebrown;
+            }
+        }
+    }
+}

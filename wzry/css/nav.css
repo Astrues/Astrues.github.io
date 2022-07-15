@@ -1,0 +1,355 @@
+.main {
+  background-image: url(../images/big-bg.jpg);
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-width: 1300px;
+  background-position: center top;
+}
+.main nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+.main nav:hover .content .nav-item .detail {
+  height: 280px;
+}
+.main nav .content {
+  width: 1300px;
+  height: 84px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main nav .content .pvp-logo {
+  height: 84px;
+  width: 240px;
+  background: url(../images/big-logo.png) no-repeat;
+  background-position: center;
+}
+.main nav .content .nav-item {
+  height: 84px;
+  flex-grow: 1;
+}
+.main nav .content .nav-item .item {
+  display: flex;
+}
+.main nav .content .nav-item .item a {
+  height: 84px;
+  flex-grow: 1;
+  text-decoration: none;
+  text-align: center;
+  color: #c9c9dd;
+}
+.main nav .content .nav-item .item a:hover {
+  background-image: linear-gradient(rgba(217, 173, 80, 0.05), 95%, #f3c258 95%);
+  color: #f3c258;
+}
+.main nav .content .nav-item .item a:hover div:last-child {
+  opacity: 0.8;
+}
+.main nav .content .nav-item .item a div:first-child {
+  padding-top: 25px;
+}
+.main nav .content .nav-item .item a div:last-child {
+  font-size: 10px;
+  margin-top: 12px;
+}
+.main nav .content .nav-item .detail {
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  transition: height 300ms;
+}
+.main nav .content .nav-item .detail .list {
+  width: 1300px;
+  height: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 240px;
+  padding-right: 300px;
+  display: flex;
+  padding-top: 20px;
+}
+.main nav .content .nav-item .detail .list .sub {
+  flex-grow: 1;
+  height: 50px;
+  width: 117px;
+}
+.main nav .content .nav-item .detail .list .sub a {
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: #c9c9dd;
+}
+.main nav .content .nav-item .detail .list .sub a:hover {
+  color: #f3c258;
+  text-decoration: underline;
+}
+.main nav .content .search {
+  height: 84px;
+  width: 80px;
+}
+.main nav .content .search a {
+  height: 84px;
+  width: 35px;
+  display: block;
+  background-image: url(../images/nav_search.png);
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+.main nav .content .login {
+  height: 84px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+}
+.main nav .content .login .login-ico {
+  width: 42px;
+  height: 42px;
+  border: #f3c258 solid 2px;
+  background-image: url(../images/login.png);
+  border-radius: 50%;
+}
+.main nav .content .login .text {
+  margin-left: 10px;
+}
+.main nav .content .login .text a {
+  text-decoration: none;
+  color: #fafafa;
+}
+.main nav .content .login .text div {
+  color: #bbb;
+  font-style: 13px;
+  padding-top: 10px;
+}
+.main .content {
+  margin: 0 auto;
+  width: 1200px;
+}
+.main .content .ad {
+  display: block;
+  height: 450px;
+  width: 1300px;
+}
+.main .content .news {
+  height: 342px;
+  display: flex;
+}
+.main .content .news .left {
+  width: 604px;
+  height: 342px;
+  position: relative;
+  overflow: hidden;
+}
+.main .content .news .left .images {
+  position: absolute;
+  width: 4000px;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  transition: left 200ms;
+}
+.main .content .news .left .images a img {
+  height: 298px;
+  width: 604px;
+}
+.main .content .news .left .title {
+  height: 44px;
+  background-color: #000;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.main .content .news .left .title a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #b1b2be;
+  line-height: 44px;
+  text-align: center;
+  font-size: 14px;
+}
+.main .content .news .left .title a:hover {
+  color: #f3c258;
+}
+.main .content .news .left .title a.active {
+  color: #f3c258;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.main .content .news .center {
+  width: 360px;
+  height: 342px;
+  background-color: rgba(30, 30, 30, 0.85);
+  box-sizing: border-box;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.main .content .news .center .menu {
+  display: flex;
+  color: #c9c9dd;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.main .content .news .center .menu div {
+  flex-grow: 1;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.main .content .news .center .menu div:hover {
+  border-bottom: 3px solid #f3c258;
+  transition: border-bottom 1000ms;
+}
+.main .content .news .center .menu .active {
+  border-bottom: 3px solid #f3c258;
+  transition: border-bottom 1000ms;
+}
+.main .content .news .center .menu a {
+  width: 20px;
+  height: 35px;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  color: #c9c9dd;
+}
+.main .content .news .center .all-list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  transition: left 200ms;
+}
+.main .content .news .center .all-list .news-list {
+  width: 360px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.main .content .news .center .all-list .news-list a {
+  text-decoration: none;
+  color: #c9c9dd;
+}
+.main .content .news .center .all-list .news-list .title {
+  display: block;
+  height: 36px;
+  font-size: 17px;
+  background-color: #555;
+  line-height: 36px;
+  padding-left: 20px;
+  margin: 15px 0 10px 0;
+  color: #f3c258;
+}
+.main .content .news .center .all-list .news-list .list {
+  font-size: 14px;
+  display: flex;
+  padding: 5px 0;
+}
+.main .content .news .center .all-list .news-list .list .text-icon {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 3px;
+  font-size: 12px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.main .content .news .center .all-list .news-list .list .icon-hot {
+  color: red;
+  border: 1px solid red;
+}
+.main .content .news .center .all-list .news-list .list .icon-notice {
+  color: orange;
+  border: 1px solid orange;
+}
+.main .content .news .center .all-list .news-list .list .icon-news {
+  color: #1e96ab;
+  border: 1px solid #1e96ab;
+}
+.main .content .news .center .all-list .news-list .list .icon-match {
+  color: #4d9cff;
+  border: 1px solid #4d9cff;
+}
+.main .content .news .center .all-list .news-list .list .icon-active {
+  color: #139b4c;
+  border: 1px solid #139b4c;
+}
+.main .content .news .center .all-list .news-list .list a {
+  height: 22px;
+  line-height: 22px;
+  width: 240px;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main .content .news .center .all-list .news-list .list .date {
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  color: #c9c9dd;
+}
+.main .content .news .right {
+  width: 236px;
+  height: 342px;
+  position: relative;
+}
+.main .content .news .right a {
+  display: block;
+  background-image: url(../images/sprite.png);
+  width: 100%;
+}
+.main .content .news .right a:nth-of-type(1) {
+  height: 129px;
+  background-position: 0 -218px;
+}
+.main .content .news .right a:nth-of-type(2) {
+  height: 107px;
+  background-position: 0 -350px;
+}
+.main .content .news .right a:nth-of-type(3) {
+  height: 107px;
+  background-position: 0 -463px;
+}
+.main .content .news .right a:nth-of-type(4) {
+  background-image: url(../images/shiling.png);
+  width: 53px;
+  height: 68px;
+  position: absolute;
+  right: -58px;
+  top: 0;
+}
+.main .content .news .right a:nth-of-type(5) {
+  background-image: url(../images/fanchenmi.png);
+  background-size: 53px 47px;
+  width: 53px;
+  height: 47px;
+  position: absolute;
+  right: -58px;
+  top: 73px;
+}
+.myicon::after {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/sprite.png);
+}
+.myicon.icon-n::after {
+  background-position: -140px -70px;
+}
+.myicon.icon-h::after {
+  background-position: -164px -70px;
+}
+.myicon.icon-cz::after {
+  background-position: -138px -8px;
+}
